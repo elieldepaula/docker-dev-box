@@ -8,6 +8,7 @@ Este projeto tem como objetivo ser um ambiente de desenvolvimento completo para 
 - REDIS
 - NATS Mensageria
 - VSCode server
+- PHPMyAdmin
 
 ## Setup
 

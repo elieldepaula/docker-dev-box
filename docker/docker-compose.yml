@@ -2,6 +2,7 @@ version: '3'
 
 services:
 
+  # Chave SSH
   key:
     container_name: ${PROJECT_NAME}-key
     build: ./build/key
@@ -11,7 +12,6 @@ services:
     volumes:
       - keys-data:/tmp 
      
-
   # Servidor web NGINX
   web:
     container_name: ${PROJECT_NAME}-web
@@ -44,7 +44,6 @@ services:
       - ./conf/php/opcache.ini:/usr/local/etc/php/conf.d/opcache.ini
       - ./conf/php/apcu.ini:/usr/local/etc/php/conf.d/apcu.ini
      
-
   # Banco de dados Mysql
   mysql:
     container_name: ${PROJECT_NAME}-mysql
@@ -61,7 +60,7 @@ services:
     networks:
       - app_network
 
-
+  # PhpMyadmin
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     links:
